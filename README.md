@@ -1,7 +1,6 @@
 Note: Those who are facing error 
 1. Error: Cannot enqueue Handshake after already enqueuing a Handshake. ( comment all // connection.connect(); and // connection.end(); in passport.js
 2. TypeError: Cannot read property 'insertId' of undefined ( resolve it by creating the **users** table manually in phpmyadmin using the provided code in scripts/create_Database.js)
-3. 
 # Complete Guide to Node Authentication with MySQL
 
 
