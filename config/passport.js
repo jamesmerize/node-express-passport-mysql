@@ -66,7 +66,7 @@ module.exports = function(passport) {
                     };
 
                     var insertQuery = "INSERT INTO users ( username, password ) values (?,?)";
-                    connection.connect();
+                    // connection.connect();
                     connection.query(insertQuery,[newUserMysql.username, newUserMysql.password],function(err, rows) {
                         newUserMysql.id = rows.insertId;
 
