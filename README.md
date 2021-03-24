@@ -1,6 +1,20 @@
 Note: Those who are facing error in orginal git repository
 1. Error: Cannot enqueue Handshake after already enqueuing a Handshake. ( comment all // connection.connect(); and // connection.end(); in passport.js
 2. TypeError: Cannot read property 'insertId' of undefined ( resolve it by creating the **users** table manually in phpmyadmin using the provided code in scripts/create_Database.js)
+
+mysql table create users code 
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `password` char(60) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+
 # Complete Guide to Node Authentication with MySQL
 
 
